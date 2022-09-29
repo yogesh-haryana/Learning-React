@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Greet from './user-components/greet';
+import ClassComp from './user-components/classComp';
+import JSXTutorial from './user-components/jsxAndCreatElement';
+import LearningProps from './user-components/learningProps';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greet />
+      <ClassComp />
+      <JSXTutorial />
+      <LearningProps subject="JavaScript" version="ES6">
+        <p>Children = React</p>
+
+      </LearningProps>
+
     </div>
   );
 }
