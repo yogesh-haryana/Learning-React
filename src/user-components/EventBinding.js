@@ -5,12 +5,13 @@ class EventBinding extends Component {
         super(props)
 
         this.state = {
-            message : 'Hello'
+            message: 'Hello'
         }
+        this.clickHandler = this.clickHandler.bind(this)
     }
     clickHandler() {
         this.setState({
-            message : 'GoodBye'
+            message: 'GoodBye'
         })
         console.log(this)
     }
@@ -18,7 +19,9 @@ class EventBinding extends Component {
         return (
             <div>
                 <h1>{this.state.message}</h1>
-                <button onClick={this.clickHandler.bind(this)}>Click me</button>
+                {/* <button onClick={this.clickHandler.bind(this)}>Click me</button> */}
+                {/* <button onClick={() => this.clickHandler()}>Click me</button> */}
+                <button onClick={this.clickHandler}>Click me</button>
 
             </div>
         )
