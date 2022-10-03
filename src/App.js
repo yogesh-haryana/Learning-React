@@ -20,7 +20,16 @@ import InlineStyling from './user-components/InlineStyling';
 import './appStyles.css'
 import styles from './appStyles.module.css'
 import BasicForm from './user-components/BasicForm';
-
+import LifeCycleA from './user-components/LifeCycleA';
+import Fragments from './user-components/Fragments';
+import Table from './user-components/Table';
+import ParentComp from './user-components/ParentComp';
+import RefsDemo from './user-components/RefsDemo';
+import InputRef from './user-components/InputRef';
+import FRInputComp from './user-components/FRInputComp';
+import PortalDemo from './user-components/PortalDemo';
+import HeroNameError from './user-components/HeroNameError';
+import ErrorBoundary from './user-components/ErrorBoundary';
 
 function App() {
   return (
@@ -37,7 +46,7 @@ function App() {
       <StatesAndSetStates addValue = {5}></StatesAndSetStates>
       <DestructuringProps name = 'Sidhu' inspiration = 'Sidhu Moose Wala'></DestructuringProps> */}
       {/* <DestructuringWithClasses shortName = 'Yogesh' fullName = 'Yogesh Yaduvanshi' ></DestructuringWithClasses>
-      <FuctionClick/> */} 
+      <FuctionClick/> */}
       {/* <ClickFunctionOnClasses/>
       {/* <EventBinding/>
       <ParentComponent/> */}
@@ -45,9 +54,25 @@ function App() {
       {/* <ListRendering/>
       <StylingReactComponents primary = {true}></StylingReactComponents>
       <InlineStyling/> */}
-      <BasicForm/>
+      {/* <BasicForm/> */}
+      {/* <LifeCycleA/> */}
+      {/* <Fragments/> */}
+      {/* <Table /> */}
+      {/* <ParentComp /> */}
+      {/* <RefsDemo/> */}
+      {/* <InputRef/> */}
+      {/* <FRInputComp/> */}
+      {/* <PortalDemo/> */}
+     <ErrorBoundary>
+     <HeroNameError heroName='spiderman'/>
+     </ErrorBoundary>
+     <ErrorBoundary>
+     <HeroNameError heroName='joker'/>
+     </ErrorBoundary>
+
 
       
+
 
     </div>
   );
