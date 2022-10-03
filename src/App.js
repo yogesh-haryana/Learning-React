@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import React from 'react';
+import React, { Component } from 'react';
 // import './App.css';
 import Greet from './user-components/greet';
 import ClassComp from './user-components/classComp';
@@ -36,6 +36,10 @@ import ClickCounterTwo from './user-components/ClickCounterTwo';
 import HoverCounterTwo from './user-components/HoverCounterTwo';
 import User from './user-components/User';
 import Counter from './user-components/Counter';
+import ComponentC from './context/ComponentC';
+import { UserProvider } from './context/UserContext';
+import PostList from './API/PostList';
+import PostForm from './API/PostForm';
 
 function App() {
   return (
@@ -80,14 +84,19 @@ function App() {
       {/* <ClickCounterTwo />
       <HoverCounterTwo />
       <User render={(isLoggedIn) => (isLoggedIn) ? "Yogesh" : "guest"} /> */}
-      <Counter render={(count, incrementCounter) => (<ClickCounterTwo count={count}
+      {/* <Counter render={(count, incrementCounter) => (<ClickCounterTwo count={count}
         incrementCounter={incrementCounter} />
       )}
       />
       <Counter render={(count, incrementCounter) => (<HoverCounterTwo count={count}
         incrementCounter={incrementCounter} />
       )}
-      />
+      /> */}
+      {/* <UserProvider value='yogesh'>
+      <ComponentC/>
+      </UserProvider> */}
+      {/* <PostList/> */}
+      <PostForm/>
 
 
 
