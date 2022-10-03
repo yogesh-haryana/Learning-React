@@ -16,7 +16,7 @@ class BasicForm extends Component {
       username: event.target.value
     })
   }
-  handleEmailChange(event) {
+  handleEmailChange = event=> {
     this.setState({
       email: event.target.value
     })

@@ -30,6 +30,12 @@ import FRInputComp from './user-components/FRInputComp';
 import PortalDemo from './user-components/PortalDemo';
 import HeroNameError from './user-components/HeroNameError';
 import ErrorBoundary from './user-components/ErrorBoundary';
+import ClickCounter from './user-components/ClickCounter';
+import HoverCounter from './user-components/HoverCounter';
+import ClickCounterTwo from './user-components/ClickCounterTwo';
+import HoverCounterTwo from './user-components/HoverCounterTwo';
+import User from './user-components/User';
+import Counter from './user-components/Counter';
 
 function App() {
   return (
@@ -63,15 +69,28 @@ function App() {
       {/* <InputRef/> */}
       {/* <FRInputComp/> */}
       {/* <PortalDemo/> */}
-     <ErrorBoundary>
+      {/* <ErrorBoundary>
      <HeroNameError heroName='spiderman'/>
      </ErrorBoundary>
      <ErrorBoundary>
      <HeroNameError heroName='joker'/>
-     </ErrorBoundary>
+     </ErrorBoundary> */}
+      {/* <ClickCounter name = 'yogesh '/>
+     <HoverCounter/> */}
+      {/* <ClickCounterTwo />
+      <HoverCounterTwo />
+      <User render={(isLoggedIn) => (isLoggedIn) ? "Yogesh" : "guest"} /> */}
+      <Counter render={(count, incrementCounter) => (<ClickCounterTwo count={count}
+        incrementCounter={incrementCounter} />
+      )}
+      />
+      <Counter render={(count, incrementCounter) => (<HoverCounterTwo count={count}
+        incrementCounter={incrementCounter} />
+      )}
+      />
 
 
-      
+
 
 
     </div>
