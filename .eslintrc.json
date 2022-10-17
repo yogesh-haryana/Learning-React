@@ -1,48 +1,102 @@
 {
     "env": {
         "browser": true,
-        "es2021": true,
-        "jest": true
+        "jest/globals": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "settings": {
-        "react":{
-            "version": "detect"
-        }
-    },
-    "overrides": [
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
+    "parser": "babel-eslint",
     "plugins": [
-        "react"
+        "jest",
+        "import",
+        "sort-imports-es6-autofix"
+    ],
+    "extends": [
+        "airbnb",
+        "airbnb/hooks",
+        "plugin:jest/recommended"
     ],
     "rules": {
-        "react/react-in-jsx-scope": "off",
-		"no-mixed-spaces-and-tabs": 0,
+        "jsx-a11y/no-noninteractive-element-interactions": 0,
+        "jsx-a11y/media-has-caption": 0,
+        "react/no-danger": 0,
+        "react-hooks/exhaustive-deps": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "no-nested-ternary": "off",
+        "no-shadow": "off",
+        "no-use-before-define": "off",
+        "no-continue": "off",
+        "no-mixed-operators": "off",
+        "react/no-array-index-key": "off",
+        "import/no-extraneous-dependencies": "off",
+        "react/jsx-props-no-spreading": 0,
+        "no-restricted-syntax": 0,
+        "guard-for-in": 0,
+        "no-param-reassign": 0,
+        "import/no-cycle": [0, { "maxDepth": 5 }],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/prop-types": 0,
+        "sort-imports-es6-autofix/sort-imports-es6": [
+            2,
+            {
+                "ignoreCase": false,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": [
+                    "none",
+                    "all",
+                    "multiple",
+                    "single"
+                ]
+            }
+        ],
+        "import/extensions": [
+            "off"
+        ],
+        "import/first": 0,
+        "import/order": 0,
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "ignore"
+            }
+        ],
+        "generator-star-spacing": [
+            "error",
+            "before"
+        ],
         "indent": [
             "error",
             4
         ],
-        "linebreak-style": [
+        "linebreak-style": 0,
+        "max-len": [
             "error",
-            "windows"
+            {
+                "code": 150,
+                "ignoreUrls": true,
+                "ignoreRegExpLiterals": true,
+                "ignoreComments": true,
+                "tabWidth": 2
+            }
         ],
-        "quotes": [
-            "error",
-            "single"
+        "react/jsx-indent": [
+            1,
+            4
         ],
-        "semi": [
-            "error",
-            "always"
-        ]
+        "react/jsx-indent-props": [
+            1,
+            4
+        ],
+        "react/jsx-fragments": [0]
     }
 }
